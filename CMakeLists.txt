@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.31)
+project(vier_op_een_rij)
+set(CMAKE_CXX_STANDARD 20)
+file(GLOB_RECURSE sources src/*.cpp src/*.h)
+add_executable(vier_op_een_rij ${sources})
