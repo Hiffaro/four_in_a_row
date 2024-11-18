@@ -11,6 +11,7 @@ class Playfield {
 public:
     Playfield();
 
+    bool dropPiece(Piece piece, int column);
     bool gameOver();
     void printGame();
 };

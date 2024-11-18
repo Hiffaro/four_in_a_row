@@ -7,6 +7,17 @@ Playfield::Playfield() {
     }
 }
 
+bool Playfield::dropPiece(Piece piece, int column) {
+    for(int y = PLAYFIELD_HEIGHT-1; y >= 0; --y) {
+        Piece p = mPlayfield[y * PLAYFIELD_WIDTH + column];
+        if(p == Piece::EMPTY) {
+            mPlayfield[y * PLAYFIELD_WIDTH + column] = piece;
+            return true;
+        }
+    }
+    return false;
+}
+
 bool Playfield::gameOver() {
     return false;
 }

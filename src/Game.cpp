@@ -15,6 +15,7 @@ void Game::playGame() {
         // Print the game field.
         mPlayfield->printGame();
 
+        // Do a turn for the current player.
         if(mTurn == PLAYER_ONE) {
             mPlayer1->doMove();
             mTurn = PLAYER_TWO;
